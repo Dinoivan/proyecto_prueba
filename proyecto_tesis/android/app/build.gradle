@@ -60,7 +60,7 @@ android {
     }
 
     buildscript {
-        ext.kotlin_version = '1.8.0'
+        ext.kotlin_version = '1.6.0'
         repositories {
             google()
             mavenCentral()
@@ -68,7 +68,7 @@ android {
         }
         dependencies {
             classpath 'com.android.tools.build:gradle:4.1.0'
-            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Aquí se reemplaza la versión
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"// Aquí se reemplaza la versión
             classpath 'com.google.gms:google-services:4.3.4'
             classpath "com.google.firebase:firebase-crashlytics-gradle:2.5.0"
             classpath "com.github.dcendents:android-maven-gradle-plugin:2.1"
