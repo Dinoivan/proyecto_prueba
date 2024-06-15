@@ -60,7 +60,7 @@ android {
     }
 
     buildscript {
-        ext.kotlin_version = '1.6.0'
+        ext.kotlin_version = '1.8.0'
         repositories {
             google()
             mavenCentral()
@@ -86,6 +86,15 @@ allprojects {
         jcenter()
         maven { url 'https://jitpack.io' }
     }
+    configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'org.jetbrains.kotlin' && details.requested.name.contains('kotlin')) {
+                details.useVersion "1.8.0"
+            }
+        }
+    }
 }
 
-dependencies {}
+dependencies {
+
+}
